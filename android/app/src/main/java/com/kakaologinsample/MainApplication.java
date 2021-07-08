@@ -10,6 +10,7 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import com.kakao.sdk.common.KakaoSdk;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -43,6 +44,7 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
+    KakaoSdk.init(this, "d34947f3187692fe8c38a7e4442fe7d2");
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }

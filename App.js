@@ -7,15 +7,15 @@
  */
 
 import React from 'react';
-import {ScrollView, View, StyleSheet, Text} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import KakaoLoginBtn from './KakaoLoginBtn';
+
 
 class App extends React.Component{
   render(){
       return(
           <View style={styles.container}>
               <ScrollView keyboardShouldPersistTaps='always' style={styles.content}>
-                  <Text>살려줘</Text>
                   <KakaoLoginBtn/>
               </ScrollView>
           </View>
