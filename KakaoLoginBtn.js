@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, TouchableOpacity, Text, Alert} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import KakaoSDK from '@actbase/react-kakaosdk';
 
 class KakaoLoginBtn extends React.Component {
@@ -20,6 +20,7 @@ class KakaoLoginBtn extends React.Component {
         .then((result) => {
           this.getProfile();
           console.log(`Login Finished:${JSON.stringify(result)}`);
+          console.log(`Login Finished noneJson:${result}`);
             this.setState({
                 tmTxt:
                     `access Token : ${result.access_token},
@@ -49,7 +50,7 @@ class KakaoLoginBtn extends React.Component {
                 tmTxt: this.state.tmTxt+
                     `profile id : ${result.id},
                     kakao_account : ${result.kakao_account},
-                    token type : ${result.connected_at}
+                    connected_at : ${result.connected_at}
                     `
             })
         })
