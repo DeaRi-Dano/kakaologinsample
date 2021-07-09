@@ -21,7 +21,13 @@ class KakaoLoginBtn extends React.Component {
           this.getProfile();
           console.log(`Login Finished:${JSON.stringify(result)}`);
             this.setState({
-                tmTxt: result.access_token
+                tmTxt:
+                    `access Token : ${result.access_token},
+                    refresh Token : ${result.refresh_token},
+                    token type : ${result.token_type},
+                    scopes : ${result.scopes},
+                    expires in : ${result.expires_in},
+                    `
             })
         })
         .catch((err) => {
@@ -39,7 +45,13 @@ class KakaoLoginBtn extends React.Component {
         .then((result) => {
           console.log(`Login Finished:${JSON.stringify(result)}`);
           // 이후 result.id를 활용해서 로그인 로직을 구현해주세용
-
+            this.setState({
+                tmTxt: this.state.tmTxt+
+                    `profile id : ${result.id},
+                    kakao_account : ${result.kakao_account},
+                    token type : ${result.connected_at}
+                    `
+            })
         })
         .catch((err) => {
           console.log(`Get Profile Failed:${err.code} ${err.message}`);
