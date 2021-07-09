@@ -20,6 +20,9 @@ class KakaoLoginBtn extends React.Component {
         .then((result) => {
           this.getProfile();
           console.log(`Login Finished:${JSON.stringify(result)}`);
+            this.setState({
+                tmTxt: result.access_token
+            })
         })
         .catch((err) => {
           if (err.code === 'E_CANCELLED_OPERATION') {
@@ -36,9 +39,7 @@ class KakaoLoginBtn extends React.Component {
         .then((result) => {
           console.log(`Login Finished:${JSON.stringify(result)}`);
           // 이후 result.id를 활용해서 로그인 로직을 구현해주세용
-          this.setState({
-            tmTxt: result
-          })
+
         })
         .catch((err) => {
           console.log(`Get Profile Failed:${err.code} ${err.message}`);
@@ -56,6 +57,7 @@ class KakaoLoginBtn extends React.Component {
     );
   };
 };
+
 
 const styles = StyleSheet.create({
   button: {
