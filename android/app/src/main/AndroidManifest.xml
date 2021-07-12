@@ -21,7 +21,7 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
-        <meta-data android:name="com.kakao.sdk.AppKey" android:value="d34947f3187692fe8c38a7e4442fe7d2" />
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="f71fe6a33c1557573b2546f829658818" />
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -29,7 +29,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:host="oauth"
-                      android:scheme="kakaod34947f3187692fe8c38a7e4442fe7d2" />
+                      android:scheme="kakaof71fe6a33c1557573b2546f829658818" />
             </intent-filter>
         </activity>
     </application>

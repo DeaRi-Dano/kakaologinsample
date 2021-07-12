@@ -44,7 +44,7 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
-    KakaoSdk.init(this, "d34947f3187692fe8c38a7e4442fe7d2");
+    KakaoSdk.init(this, "f71fe6a33c1557573b2546f829658818");
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }
